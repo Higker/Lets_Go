@@ -48,5 +48,9 @@ func main() {
 	fmt.Println(strings.HasSuffix(url, "com"))
 	//判断子串出现的位置
 	fmt.Println(strings.Index(url, "google"))
+	tack := "www.tencent.com"
+	for _, c := range tack {
+		fmt.Printf("%c\n", c)
+	}
 
 }
