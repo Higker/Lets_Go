@@ -13,10 +13,10 @@ func main() {
 	// 	}
 	// }
 	count := 0
-	for _, c := range "Hello世界!" {
+	for _, c := range "Hello World!您好世界~" {
 		if len(string(c)) == 3 {
 			count++
 		}
 	}
-	fmt.Println("str里面中文字符的长度是:", count)
+	fmt.Println("str里面中文字符的个数是:", count)
 }
