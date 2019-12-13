@@ -44,3 +44,14 @@ func sub(num int64) (result int64) {
 	num--
 	return num
 }
+
+// [Running] go run "/Users/ding/Documents/GO_CODE_DEV/src/Lets_Go/lest_06_operator/main.go"
+// 200 + 101 = 301
+// 301 - 200 = 501
+// 100 * 2 = 200
+// 100 / 2 = 50
+// 100 % 3 = 1
+// 1
+// 0
+
+// [Done] exited with code=0 in 1.514 seconds
