@@ -1,2 +1,34 @@
-# Lets_Go
-let's go！！个人学习go语言笔记📒
+
+
+<p align="center">
+    <a href="https://github.com/BinScholl/"><img src="https://www.vectorlogo.zone/logos/golang/golang-ar21.svg" width="350"/></a>
+    <h1 align="center">Let's Go 📚</h1>
+</p>
+
+<p align="center">这是一个<code>Go</code>语言零基础 学习笔记的代码仓库📒</p>
+<p align="center">
+    🤩 <a href="https://github.com/BinScholl/ApeTranslation" target="_blank">仓库地址</a> | 
+    🍻<a href="https://github.com/BinScholl/ApeTranslation/releases" target="_blank">代码下载 </a> | 
+    👷 <a href="https://wpa.qq.com/msgrd?v=3&uin=2420498526&site=qq&menu=yes" target="_blank">联系作者</a> 
+</p>
+
+### 🔝置顶通知❣️
+
+<p align="center">
+  本仓库是我👤个人使用业余时间学习<code>Go lang</code>自己整理的笔记和代码,希望帮助那些同样想学习<code>Go lang</code>的朋友,如果对你帮助别忘了帮忙点击右上方的<code>star✨</code>按钮一下本项目😜。
+</p>
+
+</br>
+</br>
+
+<p align="right">By: 丁 烁
+                    2020年01月04日14:02:29</p> 
+
+----------
+
+
+### 📚目录树🌲
+
+
+
+----------
