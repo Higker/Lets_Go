@@ -1,10 +1,10 @@
 /*
- * @Author: BinScholl
+ * @Author: Deencode
  * @Date: 2020-01-03 18:27:04
- * @LastEditors  : BinScholl
+ * @LastEditors  : Deencode
  * @LastEditTime : 2020-01-03 19:46:05
  * @Description: go语言中的switch语句使用示例
- * @Github: https://github.com/BinScholl
+ * @Github: https://github.com/Deencode
  */
 
 package main

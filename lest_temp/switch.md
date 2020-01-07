@@ -67,4 +67,4 @@ func main() {
 
 ### 4.Of course, these are my personal needs and opinions, and do not represent everyone's thoughts. I just have this idea. I hope you can consider it, thank you😄🤝～
 
-- 2019-12-07 18:58:07 UTC + (＋0800) By:BinScholl Email:BinScholl@foxmail.com
+- 2019-12-07 18:58:07 UTC + (＋0800) By:Deencode Email:Deencode@foxmail.com

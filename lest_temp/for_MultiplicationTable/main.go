@@ -1,10 +1,10 @@
 /*
- * @Author: BinScholl
+ * @Author: Deencode
  * @Date: 2020-01-03 15:05:14
- * @LastEditors  : BinScholl
+ * @LastEditors  : Deencode
  * @LastEditTime : 2020-01-03 15:26:51
  * @Description go语言使用for循环打印九九乘法表 MultiplicationTable
- * @Github: https://github.com/BinScholl
+ * @Github: https://github.com/Deencode
  */
 
 package main

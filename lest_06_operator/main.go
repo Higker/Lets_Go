@@ -1,10 +1,10 @@
 /*
- * @Author: BinScholl
+ * @Author: Deencode
  * @Date: 2019-12-13 20:38:08
- * @LastEditors  : BinScholl
+ * @LastEditors  : Deencode
  * @LastEditTime : 2020-01-06 13:36:39
  * @Description: go语言中的运算符 加减乘除法 取余
- * @Github: https://github.com/BinScholl
+ * @Github: https://github.com/Deencode
  */
 
 package main

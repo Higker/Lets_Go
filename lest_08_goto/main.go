@@ -1,10 +1,10 @@
 /*
- * @Author: BinScholl
+ * @Author: Deencode
  * @Date: 2020-01-03 19:58:26
- * @LastEditors  : BinScholl
+ * @LastEditors  : Deencode
  * @LastEditTime : 2020-01-05 13:52:12
  * @Description: go语言中goto关键字的使用
- * @Github: https://github.com/BinScholl
+ * @Github: https://github.com/Deencode
  */
 
 package main
