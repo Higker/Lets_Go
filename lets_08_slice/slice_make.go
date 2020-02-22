@@ -53,5 +53,35 @@ func subSlice(s []int) {
 
 /*
 代码运行结果
+[Running] go run "d:\Go_workspace\src\Lets_Go\lets_08_slice\slice_make.go"
+s1= [0 0 0 0 0 0],len(s1)=6,cap(s1)=10
+s2= [    ],len(s2)= 5,cap(s2)= 5
+a1 =  [1 2 3 4 5 6 7 8 9 0]
+s3 =  [4 5 6 7 8] len(s3) =  5 cap(s3) =  7
+a1 == nil ? false
+index: 0 ,value: 1
+index: 1 ,value: 2
+index: 2 ,value: 3
+index: 3 ,value: 4
+index: 4 ,value: 5
+index: 5 ,value: 6
+index: 6 ,value: 7
+index: 7 ,value: 8
+index: 8 ,value: 9
+index: 9 ,value: 0
+index: 0 ,value: 1
+index: 1 ,value: 2
+index: 2 ,value: 3
+index: 3 ,value: 4
+index: 4 ,value: 5
+index: 5 ,value: 6
+index: 6 ,value: 7
+index: 7 ,value: 8
+index: 8 ,value: 9
+index: 9 ,value: 0
+person: [马化腾 扎克伯格] len(person)= 2 cap(person)= 2
+city = [上海 深圳 北京 天津 重庆]
+city =  [深圳 北京 天津] city的len是 3 city的cap是 4
 
+[Done] exited with code=0 in 4.934 seconds
 */
