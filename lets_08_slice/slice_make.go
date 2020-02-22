@@ -21,6 +21,15 @@ func main() {
 	ss := a1[:]
 	subSliceOf(ss)
 	subSlice(ss)
+
+	//切片的赋值
+	var name = [2]string{"马化腾", "扎克伯格"} //名字数组
+	var person = make([]string, 10)     //人名切片
+	//此时的内存引用已经丢弃了原来通过make函数创建的person底层那个数组
+	//现在而是通过我们刚才自己定义name这个数组来进行操作
+	//person = name[:1] person: [马化腾] len(person)= 1 cap(person)= 2
+	person = name[:]
+	fmt.Println("person:", person, "len(person)=", len(person), "cap(person)=", cap(person))
 }
 
 /*
