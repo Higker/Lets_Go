@@ -19,4 +19,15 @@ func main() {
 		}
 	}
 	fmt.Println("str里面中文字符的个数是:", count)
+
+	//求2到100的素数
+
+	for i := 2; i < 100; i++ {
+		for j := 2; j < i; j++ {
+			if i/j == 0 {
+				fmt.Println(i)
+				break
+			}
+		}
+	}
 }
