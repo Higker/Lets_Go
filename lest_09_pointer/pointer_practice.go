@@ -16,4 +16,9 @@ func main() {
 	//var ptrTemp *int 这里声明了一个int指针类型的变量   *代表的是取指针的值 但是这个值nil 没有内存地址
 	//*ptrTemp = 100 所以到这里来通过*取内存地址的值就会报错
 	//fmt.Println(ptrTemp)
+	var ptrT *int
+	ptrT = &i //这里我们把i的地址给了ptrT这个指针了所以运行是没有问题 如果是上面那种直接操作 是nil的~~
+	*ptrT = 999
+	fmt.Println(*ptrT)
+	fmt.Println(ptrT)
 }
