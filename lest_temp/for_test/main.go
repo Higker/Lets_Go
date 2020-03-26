@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"unicode"
+)
 
 //计算一个字符串里面包含有多少个中文字符
 func main() {
@@ -30,4 +33,25 @@ func main() {
 			}
 		}
 	}
+
+	str := "ABCD上海Google公司"
+	count2 := 0
+	for _, v := range str {
+		if len(string(v)) == 3 {
+			count2++
+		}
+	}
+	fmt.Println(count2)
+
+	s := "这是个一包含汉字和英文的字符串, This is an apple"
+	hzc := 0
+
+	for _, v := range s {
+		if unicode.Is(unicode.Han, v) {
+			hzc++
+		}
+	}
+
+	fmt.Printf("该字符串中找到中文个数是：%v\n", hzc)
+
 }
