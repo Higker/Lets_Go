@@ -69,7 +69,7 @@ func sortFraction(students map[string]int) {
 		frSli = append(frSli, f) //通过分数key 存储到 分数切片里面
 	}
 	sort.Ints(frSli)
-	//用来存储 排序好的学生名字和分数
+	//用来存储 排序好的学生名字和分数 || 这种弊端就是怕元素位重复到 key重复赋值
 	sortStu := make(map[string]int, len(students))
 	for _, f := range frSli {
 		//fmt.Println("f", f)
