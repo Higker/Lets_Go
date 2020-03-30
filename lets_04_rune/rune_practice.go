@@ -30,14 +30,27 @@ func main() {
 	}
 	fmt.Println(cmap)
 
-	//通过上面案例 实现类似于 QQ敏感词汇拦截
-	str := "zyh 我操你妈的 ~"
-	runeStr := []rune(str)
-	for _, v := range runeStr {
-		t := fmt.Sprintf("%s", v);
-		if  t == string("操") {
-			fmt.Println("保护敏感词", t)
+	//回文判断
+	//上海自来水来自海上
+	//黄山落叶松叶落山黄
+
+	tstr := "上海自来水来自海上"
+	rstr := []rune(tstr)
+	for i := 0; i < len(rstr); i++ {
+		//比较方式就是 通过index 和最后一个end_index进行比较 首位比较
+		fmt.Println(string(rstr[i]))
+		for j := len(rstr); j >= i; j-- {
+			if string(rstr[i]) == string(rstr[(j-1)]) {
+				fmt.Printf("rstr[%d] = %s | rstr[%d] \n", i, string(rstr[i]), j, string(rstr[j]))
+			}
 		}
-		fmt.Println("保护敏感词", t)
 	}
+	//通过上面案例 实现类似于 QQ敏感词汇拦截
+	// str := "zyh 我操你妈的 ~"
+	// mgc := "草泥马操你妈傻逼"
+	// for _, v := range []rune(str) {
+	// 	if unicode.In(v, mgc) {
+	// 		fmt.Println("敏感词")
+	// 	}
+	// }
 }
