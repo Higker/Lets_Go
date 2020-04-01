@@ -32,19 +32,20 @@ func makeEnding(suffix string) func(file string) string {
 }
 
 func buildMath(number int) (add func(n int) int, sub func(nu int) int) {
-	/*
-		//加法实现
-		add = func(n int)int{
-			return numder+n
-		}
-		//减法实现
-		sub = func(nn int)int{
-			return numder-nu
-		}
-	*/
-	return func(n int) int {
-			return number + n
-		}, func(nu int) int {
-			return number - nu
-		}
+
+	//加法实现
+	add = func(n int) int {
+		return number + n
+	}
+	//减法实现
+	sub = func(nu int) int {
+		return number - nu
+	}
+	return add, sub
+
+	// return func(n int) int {
+	// 		return number + n
+	// 	}, func(nu int) int {
+	// 		return number - nu
+	// 	}
 }
