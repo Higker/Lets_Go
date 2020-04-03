@@ -73,3 +73,4 @@ func sumLeft() (Left int) {
 	Left = coins - Left
 	return Left
 }
+ 
