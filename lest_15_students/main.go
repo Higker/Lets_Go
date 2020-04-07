@@ -1,16 +1,19 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
+	"log"
 	"math/rand"
+	"net/http"
 	"os"
 	"time"
 )
 
 //查看 新增 删除 学生
 type student struct {
-	id   int64
-	name string
+	Id   int64
+	Name string
 }
 
 var (
@@ -26,6 +29,7 @@ func menu() {
 	fmt.Println("1.查看学生")
 	fmt.Println("2.新增学生")
 	fmt.Println("3.删除学生")
+	fmt.Println("4.开启HTTP")
 	fmt.Println("0.退出系统")
 	fmt.Println("=================================")
 	fmt.Println("请输入序号:")
@@ -43,6 +47,9 @@ func menu() {
 	case 0:
 		exit()
 		menu()
+	case 4:
+		runServer()
+		menu()
 	default:
 		menu()
 	}
@@ -52,7 +59,7 @@ func menu() {
 func see() {
 	for n, v := range students {
 		fmt.Println("--------------------------------------------------------------")
-		fmt.Printf("第%d条记录| 学生ID: %d | 学生姓名: %s \n", n+1, v.id, v.name)
+		fmt.Printf("第%d条记录| 学生ID: %d | 学生姓名: %s \n", n+1, v.Id, v.Name)
 		fmt.Println("--------------------------------------------------------------")
 	}
 }
@@ -75,7 +82,7 @@ func delete() {
 	fmt.Println("请输入要删除的学生ID:")
 	fmt.Scan(&id)
 	for i := 0; i < len(students); i++ {
-		if id == students[i].id {
+		if id == students[i].Id {
 			//通过切片截取 移除掉不需要的那个学生信息
 			students = append(students[:i], students[(i+1):]...)
 			fmt.Println("--------------------------------------------------------------")
@@ -98,9 +105,18 @@ func NewStudent(name string) student {
 	rand.NewSource(time.Now().UnixNano())
 	id := rand.Int63()
 	return student{
-		id:   id,
-		name: name,
+		Id:   id,
+		Name: name,
 	}
+}
+
+//开启http服务器
+func runServer() {
+	http.HandleFunc("/user", func(w http.ResponseWriter, r *http.Request) {
+		jsonStr, _ := json.Marshal(students) //将切片转成json字符串
+		fmt.Fprintln(w, string(jsonStr))     //通过responseWriter写出去 & 响应浏览器
+	})
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
 
 //退出程序
