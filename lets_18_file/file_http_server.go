@@ -25,11 +25,14 @@ func main() {
 		fmt.Fprint(w, string(d))
 	})
 	http.HandleFunc("/video", func(writer http.ResponseWriter, request *http.Request) {
-		writer.Header().Set("Content-Type", "video/mp4")
+
 		file, err := ioutil.ReadFile("C:/Users/Deen.job/Desktop/新建文件夹/out2.mp4")
 		if err != nil {
-			fmt.Fprintf(writer, "查无此视频")
+			JSON, _ := json.Marshal("查无此视频")
+			fmt.Fprintf(writer, string(JSON))
 			return
+		} else {
+			writer.Header().Set("Content-Type", "video/mp4")
 		}
 		writer.Write(file)
 	})
