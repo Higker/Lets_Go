@@ -2,6 +2,12 @@ package main
 
 import "fmt"
 
+func main() {
+	funcA()
+	funcB()
+	funcC()
+}
+
 func funcA() {
 	fmt.Println("func A")
 }
@@ -19,9 +25,4 @@ func funcB() {
 
 func funcC() {
 	fmt.Println("func C")
-}
-func main() {
-	funcA()
-	funcB()
-	funcC()
 }
