@@ -33,7 +33,7 @@ func main() {
 	chanJob := make(chan *JobChan, 20)
 	reChan := make(chan *Resutl, 20)
 	go dataService(chanJob)
-	for i := 0; i < 24; i++ {
+	for i := 0; i < 2; i++ {
 		go consumeData(chanJob, reChan)
 	}
 	for e := range reChan {

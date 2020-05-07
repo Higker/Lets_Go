@@ -64,6 +64,9 @@ func task2(ch <-chan int, cha chan<- int) {
 		//求平方存储到cha中
 		cha <- i * i
 	}
+	// for i := range ch {
+	// 	cha <- i * i
+	// }
 	close(cha)
 }
 
