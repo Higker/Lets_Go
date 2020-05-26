@@ -9,5 +9,15 @@
         "prefix": "plf",
         "body": "fmt.Printf(\"$0\")",
         "description": "printf"
+    },
+    "main": {
+        "prefix": "main",
+        "body": "package main \n\n\nfunc main(){\n\n\n}",
+        "description": "application main function"
+    },
+    "fori": {
+        "prefix": "for",
+        "body": "for i:=0;i<$0;i++;{}",
+        "description": "for"
     }
 }

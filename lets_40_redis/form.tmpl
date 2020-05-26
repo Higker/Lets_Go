@@ -15,12 +15,14 @@
 
 <div class="container " style="text-align: center;margin-top: 20px">
     <div class="input-group">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="">请输入账号和密码</span>
-        </div>
-        <input type="text" name="username" class="form-control">
-        <input type="text" name="password" class="form-control">
-        <button type="button" class="btn btn-primary">登 录</button>
+        <form method="get" ACTION="/post">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="">请输入账号和密码</span>
+            </div>
+            <input type="text" name="username" class="form-control">
+            <input type="text" name="password" class="form-control">
+            <button type="submit" class="btn btn-primary">登 录</button>
+        </form>
     </div>
 </div>
 

@@ -32,7 +32,7 @@ type user struct {
 func initClient() (err error) {
 	Rdb = redis.NewClient(&redis.Options{
 		Addr:     "128.199.155.162:6379",
-		Password: "admin110", // no password set
+		Password: "deen.job", // no password set
 		DB:       0,          // use default DB
 	})
 	_, err = Rdb.Ping().Result()
