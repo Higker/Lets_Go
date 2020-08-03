@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 	"runtime"
 	"time"
@@ -9,6 +10,9 @@ import (
 )
 
 func main() {
+
+	//启动一个文件服务器方便API测试
+	go fileServe()
 	// 获取一个默认路由 router
 	r := gin.Default()
 	// curl http://localhost:8080/
@@ -27,6 +31,16 @@ func main() {
 	r.GET("/user/:name", func(c *gin.Context) {
 		c.String(200, c.Param("name")+" / ID="+c.DefaultQuery("id", "1"))
 	})
+	// http://localhost:8088/
+	r.POST("/form", func(c *gin.Context) {
+		name := c.DefaultPostForm("username", "DefaultName")
+		ls := c.PostFormArray("language")
+		fmt.Fprintln(c.Writer, name, ":", ls)
+	})
 	//fmt.Println(runtime.GOOS)
 	r.Run(":8080")
+}
+
+func fileServe() {
+	http.ListenAndServe(":8088", http.FileServer(http.Dir("./")))
 }
